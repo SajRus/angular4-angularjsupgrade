@@ -1,3 +1,7 @@
-<h1>
-  {{title}}
-</h1>
+<app-header></app-header>
+<section id="main">
+    <div class="container">
+        <router-outlet></router-outlet>
+        <div ui-view></div>
+    </div>
+</section>

@@ -1,20 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
-import { AppComponent } from './app.component';
+import {Component, NgModule} from '@angular/core';
+import {ActivatedRoute, PreloadAllModules, RouterModule} from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { AppComponent } from "app/app.component";
+import { AppRoutingModule } from "app/app-routing.module";
+import { HomeComponent } from './home/home.component';
+import { PremieresComponent } from './premieres/premieres.component';
+import { SharedService } from "app/shared/shared.service";
+import { ShowComponent } from "app/imported-directive/show.component";
+import { ShowService } from "app/imported-directive/show.service";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    PremieresComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [SharedService, ShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

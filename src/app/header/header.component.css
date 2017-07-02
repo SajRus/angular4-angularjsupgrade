@@ -1,0 +1,36 @@
+#site-header {
+    background-color: #222;
+    border-color: #222;
+    height: 60px;
+    color: #CCC;
+    font-weight: 300;
+}
+#site-header .logo {
+    line-height: 60px;
+    width: 170px;
+}
+#site-header .logo .alt {
+    color: #3bb9bb;
+}
+#site-header .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#site-header .menu li {
+    display: inline-block;
+    padding: 0 10px;
+}
+#site-header .menu li a {
+    line-height: 60px;
+    color: #CCC;
+    transition: color .2s linear;
+    -o-transition: color .2s linear;
+    -moz-transition: color .2s linear;
+    -webkit-transition: color .2s linear;
+}
+#site-header .menu li a:hover {
+    line-height: 60px;
+    color: #3bb9bb;
+    text-decoration: none;
+}
